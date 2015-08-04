@@ -450,9 +450,13 @@ console.log("Running Apos Bot!");
         //drawLine(blob2Left[0], blob2Left[1], tempLine[0], tempLine[1], 0);
 
         if ((blob1Range / blob2Range) > 1) {
-            drawPoint(blob1Left[0], blob1Left[1], 3, "");
-            drawPoint(blob1Right[0], blob1Right[1], 3, "");
-            drawPoint(blob1.x, blob1.y, 3, "" + blob1Range + ", " + blob2Range + " R: " + (Math.round((blob1Range / blob2Range) * 1000) / 1000));
+            
+            // DRAW_EDIT =======================
+            //drawPoint(blob1Left[0], blob1Left[1], 3, "");
+            //drawPoint(blob1Right[0], blob1Right[1], 3, "");
+            //drawPoint(blob1.x, blob1.y, 3, "" + blob1Range + ", " + blob2Range + " R: " + (Math.round((blob1Range / blob2Range) * 1000) / 1000));
+            // =======================
+        	
         }
 
         //drawPoint(blob2.x, blob2.y, 3, "" + blob1Range);
@@ -461,8 +465,10 @@ console.log("Running Apos Bot!");
     function debugAngle(angle, text) {
         var player = getPlayer();
         var line1 = followAngle(angle, player[0].x, player[0].y, 300);
-        drawLine(player[0].x, player[0].y, line1[0], line1[1], 5);
-        drawPoint(line1[0], line1[1], 5, "" + text);
+        // DRAW_EDIT =======================
+        //drawLine(player[0].x, player[0].y, line1[0], line1[1], 5);
+        //drawPoint(line1[0], line1[1], 5, "" + text);
+        // =======================
     }
 
     //TODO: Don't let this function do the radius math.
@@ -554,9 +560,12 @@ console.log("Running Apos Bot!");
             ]);
             var lineLeft = followAngle(90, blob.x, blob.y, 190 + blob.size);
             var lineRight = followAngle(360, blob.x, blob.y, 190 + blob.size);
-            drawLine(blob.x, blob.y, lineLeft[0], lineLeft[1], 5);
-            drawLine(blob.x, blob.y, lineRight[0], lineRight[1], 5);
-            drawArc(lineLeft[0], lineLeft[1], lineRight[0], lineRight[1], blob.x, blob.y, 5);
+            // DRAW_EDIT =======================
+            //drawLine(blob.x, blob.y, lineLeft[0], lineLeft[1], 5);
+            //drawLine(blob.x, blob.y, lineRight[0], lineRight[1], 5);
+            //drawArc(lineLeft[0], lineLeft[1], lineRight[0], lineRight[1], blob.x, blob.y, 5);
+            // DRAW_EDIT =======================
+        	
         }
         else if (blob.y < f.getMapStartY() + distanceFromWallY && blob.x > f.getMapEndX() - distanceFromWallX){
             //TOPRIGHT
@@ -580,9 +589,12 @@ console.log("Running Apos Bot!");
             ]);
             var lineLeft = followAngle(0, blob.x, blob.y, 190 + blob.size);
             var lineRight = followAngle(270, blob.x, blob.y, 190 + blob.size);
-            drawLine(blob.x, blob.y, lineLeft[0], lineLeft[1], 5);
-            drawLine(blob.x, blob.y, lineRight[0], lineRight[1], 5);
-            drawArc(lineLeft[0], lineLeft[1], lineRight[0], lineRight[1], blob.x, blob.y, 5);
+            // DRAW_EDIT =======================
+           // drawLine(blob.x, blob.y, lineLeft[0], lineLeft[1], 5);
+           // drawLine(blob.x, blob.y, lineRight[0], lineRight[1], 5);
+           // drawArc(lineLeft[0], lineLeft[1], lineRight[0], lineRight[1], blob.x, blob.y, 5);
+        // DRAW_EDIT =======================
+        	
         }
         else if (blob.y > f.getMapEndY() - distanceFromWallY && blob.x > f.getMapEndX() - distanceFromWallX){
             //BOTTOMRIGHT
@@ -593,9 +605,12 @@ console.log("Running Apos Bot!");
             ]);
             var lineLeft = followAngle(270, blob.x, blob.y, 190 + blob.size);
             var lineRight = followAngle(180, blob.x, blob.y, 190 + blob.size);
-            drawLine(blob.x, blob.y, lineLeft[0], lineLeft[1], 5);
-            drawLine(blob.x, blob.y, lineRight[0], lineRight[1], 5);
-            drawArc(lineLeft[0], lineLeft[1], lineRight[0], lineRight[1], blob.x, blob.y, 5);
+            // DRAW_EDIT =======================
+            //drawLine(blob.x, blob.y, lineLeft[0], lineLeft[1], 5);
+            //drawLine(blob.x, blob.y, lineRight[0], lineRight[1], 5);
+            //drawArc(lineLeft[0], lineLeft[1], lineRight[0], lineRight[1], blob.x, blob.y, 5);
+            // DRAW_EDIT =======================
+        	
         }
         else if (blob.x < f.getMapStartX() + distanceFromWallX) {
             //LEFT
@@ -606,9 +621,12 @@ console.log("Running Apos Bot!");
             ]);
             var lineLeft = followAngle(90, blob.x, blob.y, 190 + blob.size);
             var lineRight = followAngle(270, blob.x, blob.y, 190 + blob.size);
-            drawLine(blob.x, blob.y, lineLeft[0], lineLeft[1], 5);
-            drawLine(blob.x, blob.y, lineRight[0], lineRight[1], 5);
-            drawArc(lineLeft[0], lineLeft[1], lineRight[0], lineRight[1], blob.x, blob.y, 5);
+            // DRAW_EDIT =======================
+           // drawLine(blob.x, blob.y, lineLeft[0], lineLeft[1], 5);
+            //drawLine(blob.x, blob.y, lineRight[0], lineRight[1], 5);
+            //drawArc(lineLeft[0], lineLeft[1], lineRight[0], lineRight[1], blob.x, blob.y, 5);
+        // DRAW_EDIT =======================
+        	
         }
         else if (blob.y < f.getMapStartY() + distanceFromWallY) {
             //TOP
@@ -619,9 +637,12 @@ console.log("Running Apos Bot!");
             ]);
             var lineLeft = followAngle(180, blob.x, blob.y, 190 + blob.size);
             var lineRight = followAngle(360, blob.x, blob.y, 190 + blob.size);
-            drawLine(blob.x, blob.y, lineLeft[0], lineLeft[1], 5);
-            drawLine(blob.x, blob.y, lineRight[0], lineRight[1], 5);
-            drawArc(lineLeft[0], lineLeft[1], lineRight[0], lineRight[1], blob.x, blob.y, 5);
+           // DRAW_EDIT =======================
+           // drawLine(blob.x, blob.y, lineLeft[0], lineLeft[1], 5);
+            //drawLine(blob.x, blob.y, lineRight[0], lineRight[1], 5);
+            //drawArc(lineLeft[0], lineLeft[1], lineRight[0], lineRight[1], blob.x, blob.y, 5);
+        // DRAW_EDIT =======================
+        	
         }
         else if (blob.x > f.getMapEndX() - distanceFromWallX) {
             //RIGHT
@@ -632,9 +653,12 @@ console.log("Running Apos Bot!");
             ]);
             var lineLeft = followAngle(270, blob.x, blob.y, 190 + blob.size);
             var lineRight = followAngle(90, blob.x, blob.y, 190 + blob.size);
-            drawLine(blob.x, blob.y, lineLeft[0], lineLeft[1], 5);
-            drawLine(blob.x, blob.y, lineRight[0], lineRight[1], 5);
-            drawArc(lineLeft[0], lineLeft[1], lineRight[0], lineRight[1], blob.x, blob.y, 5);
+           // DRAW_EDIT =======================
+           // drawLine(blob.x, blob.y, lineLeft[0], lineLeft[1], 5);
+            //drawLine(blob.x, blob.y, lineRight[0], lineRight[1], 5);
+            //drawArc(lineLeft[0], lineLeft[1], lineRight[0], lineRight[1], blob.x, blob.y, 5);
+        // DRAW_EDIT =======================
+        	
         }
         else if (blob.y > f.getMapEndY() - distanceFromWallY) {
             //BOTTOM
@@ -645,9 +669,12 @@ console.log("Running Apos Bot!");
             ]);
             var lineLeft = followAngle(0, blob.x, blob.y, 190 + blob.size);
             var lineRight = followAngle(180, blob.x, blob.y, 190 + blob.size);
-            drawLine(blob.x, blob.y, lineLeft[0], lineLeft[1], 5);
-            drawLine(blob.x, blob.y, lineRight[0], lineRight[1], 5);
-            drawArc(lineLeft[0], lineLeft[1], lineRight[0], lineRight[1], blob.x, blob.y, 5);
+            // DRAW_EDIT =======================
+            //drawLine(blob.x, blob.y, lineLeft[0], lineLeft[1], 5);
+            //drawLine(blob.x, blob.y, lineRight[0], lineRight[1], 5);
+            //drawArc(lineLeft[0], lineLeft[1], lineRight[0], lineRight[1], blob.x, blob.y, 5);
+        // DRAW_EDIT =======================
+        	
         }
         return listToUse;
     }
