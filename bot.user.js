@@ -82,6 +82,8 @@ console.log("Running Apos Bot!");
             f.botList.splice(i, 1);
         }
     }
+    
+    alert('yolo');
 
     f.botList.push(["AposBot " + aposBotVersion, findDestination]);
 
