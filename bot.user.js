@@ -251,7 +251,7 @@ console.log("Running Apos Bot!");
                     foodElementList.push(listToUse[element]);
 
                     if (isSplitTarget(blob, listToUse[element])) {
-                        drawCircle(listToUse[element].x, listToUse[element].y, listToUse[element].size + 50, 7);
+                        //drawCircle(listToUse[element].x, listToUse[element].y, listToUse[element].size + 50, 7);
                         splitTargetList.push(listToUse[element])
                     }
                 } else if (isThreat(blob, listToUse[element])) {
@@ -577,9 +577,9 @@ console.log("Running Apos Bot!");
             ]);
             var lineLeft = followAngle(180, blob.x, blob.y, 190 + blob.size);
             var lineRight = followAngle(90, blob.x, blob.y, 190 + blob.size);
-            drawLine(blob.x, blob.y, lineLeft[0], lineLeft[1], 5);
-            drawLine(blob.x, blob.y, lineRight[0], lineRight[1], 5);
-            drawArc(lineLeft[0], lineLeft[1], lineRight[0], lineRight[1], blob.x, blob.y, 5);
+            //drawLine(blob.x, blob.y, lineLeft[0], lineLeft[1], 5);
+            //drawLine(blob.x, blob.y, lineRight[0], lineRight[1], 5);
+            //drawArc(lineLeft[0], lineLeft[1], lineRight[0], lineRight[1], blob.x, blob.y, 5);
         }
         else if (blob.y > f.getMapEndY() - distanceFromWallY && blob.x < f.getMapStartX() + distanceFromWallX){
             //BOTTOMLEFT
@@ -763,8 +763,8 @@ console.log("Running Apos Bot!");
         var rightAngle = rangeToAngle(angleStuff);
         var difference = angleStuff[1];
 
-        drawPoint(angleStuff[2][0], angleStuff[2][1], 3, "");
-        drawPoint(angleStuff[3][0], angleStuff[3][1], 3, "");
+        //drawPoint(angleStuff[2][0], angleStuff[2][1], 3, "");
+        //drawPoint(angleStuff[3][0], angleStuff[3][1], 3, "");
 
         //console.log("Adding badAngles: " + leftAngle + ", " + rightAngle + " diff: " + difference);
 
@@ -772,17 +772,17 @@ console.log("Running Apos Bot!");
         var lineRight = followAngle(rightAngle, blob1.x, blob1.y, 150 + blob1.size - index * 10);
 
         if (blob2.isVirus()) {
-            drawLine(blob1.x, blob1.y, lineLeft[0], lineLeft[1], 6);
-            drawLine(blob1.x, blob1.y, lineRight[0], lineRight[1], 6);
-            drawArc(lineLeft[0], lineLeft[1], lineRight[0], lineRight[1], blob1.x, blob1.y, 6);
+            //drawLine(blob1.x, blob1.y, lineLeft[0], lineLeft[1], 6);
+            //drawLine(blob1.x, blob1.y, lineRight[0], lineRight[1], 6);
+            //drawArc(lineLeft[0], lineLeft[1], lineRight[0], lineRight[1], blob1.x, blob1.y, 6);
         } else if(getCells().hasOwnProperty(blob2.id)) {
-            drawLine(blob1.x, blob1.y, lineLeft[0], lineLeft[1], 0);
-            drawLine(blob1.x, blob1.y, lineRight[0], lineRight[1], 0);
-            drawArc(lineLeft[0], lineLeft[1], lineRight[0], lineRight[1], blob1.x, blob1.y, 0);
+            //drawLine(blob1.x, blob1.y, lineLeft[0], lineLeft[1], 0);
+            //drawLine(blob1.x, blob1.y, lineRight[0], lineRight[1], 0);
+            //drawArc(lineLeft[0], lineLeft[1], lineRight[0], lineRight[1], blob1.x, blob1.y, 0);
         } else {
-            drawLine(blob1.x, blob1.y, lineLeft[0], lineLeft[1], 3);
-            drawLine(blob1.x, blob1.y, lineRight[0], lineRight[1], 3);
-            drawArc(lineLeft[0], lineLeft[1], lineRight[0], lineRight[1], blob1.x, blob1.y, 3);
+            //drawLine(blob1.x, blob1.y, lineLeft[0], lineLeft[1], 3);
+            //drawLine(blob1.x, blob1.y, lineRight[0], lineRight[1], 3);
+            //drawArc(lineLeft[0], lineLeft[1], lineRight[0], lineRight[1], blob1.x, blob1.y, 3);
         }
 
         return [leftAngle, difference];
@@ -841,7 +841,7 @@ console.log("Running Apos Bot!");
 
                     //console.log("Working on blob: " + k);
 
-                    drawCircle(player[k].x, player[k].y, player[k].size + splitDistance, 5);
+                    //drawCircle(player[k].x, player[k].y, player[k].size + splitDistance, 5);
                     //drawPoint(player[0].x, player[0].y - player[0].size, 3, "" + Math.floor(player[0].x) + ", " + Math.floor(player[0].y));
 
                     //var allDots = processEverything(interNodes);
@@ -885,11 +885,11 @@ console.log("Running Apos Bot!");
                         //console.log("Removed some food.");
 
                         if (enemyCanSplit) {
-                            drawCircle(allPossibleThreats[i].x, allPossibleThreats[i].y, splitDangerDistance, 0);
-                            drawCircle(allPossibleThreats[i].x, allPossibleThreats[i].y, splitDangerDistance + shiftDistance, 6);
+                            //drawCircle(allPossibleThreats[i].x, allPossibleThreats[i].y, splitDangerDistance, 0);
+                            //drawCircle(allPossibleThreats[i].x, allPossibleThreats[i].y, splitDangerDistance + shiftDistance, 6);
                         } else {
-                            drawCircle(allPossibleThreats[i].x, allPossibleThreats[i].y, normalDangerDistance, 3);
-                            drawCircle(allPossibleThreats[i].x, allPossibleThreats[i].y, normalDangerDistance + shiftDistance, 6);
+                            //drawCircle(allPossibleThreats[i].x, allPossibleThreats[i].y, normalDangerDistance, 3);
+                            //drawCircle(allPossibleThreats[i].x, allPossibleThreats[i].y, normalDangerDistance + shiftDistance, 6);
                         }
 
                         if (allPossibleThreats[i].danger && f.getLastUpdate() - allPossibleThreats[i].dangerTimeOut > 1000) {
@@ -937,12 +937,12 @@ console.log("Running Apos Bot!");
 
                     for (var i = 0; i < allPossibleViruses.length; i++) {
                         if (player[k].size < allPossibleViruses[i].size) {
-                            drawCircle(allPossibleViruses[i].x, allPossibleViruses[i].y, allPossibleViruses[i].size + 10, 3);
-                            drawCircle(allPossibleViruses[i].x, allPossibleViruses[i].y, allPossibleViruses[i].size * 2, 6);
+                            //drawCircle(allPossibleViruses[i].x, allPossibleViruses[i].y, allPossibleViruses[i].size + 10, 3);
+                            //drawCircle(allPossibleViruses[i].x, allPossibleViruses[i].y, allPossibleViruses[i].size * 2, 6);
 
                         } else {
-                            drawCircle(allPossibleViruses[i].x, allPossibleViruses[i].y, player[k].size + 50, 3);
-                            drawCircle(allPossibleViruses[i].x, allPossibleViruses[i].y, player[k].size * 2, 6);
+                           // drawCircle(allPossibleViruses[i].x, allPossibleViruses[i].y, player[k].size + 50, 3);
+                            //drawCircle(allPossibleViruses[i].x, allPossibleViruses[i].y, player[k].size * 2, 6);
                         }
                     }
 
@@ -1031,29 +1031,29 @@ console.log("Running Apos Bot!");
                     for (var i = 0; i < goodAngles.length; i++) {
                         var line1 = followAngle(goodAngles[i][0], player[k].x, player[k].y, 100 + player[k].size);
                         var line2 = followAngle((goodAngles[i][0] + goodAngles[i][1]).mod(360), player[k].x, player[k].y, 100 + player[k].size);
-                        drawLine(player[k].x, player[k].y, line1[0], line1[1], 1);
-                        drawLine(player[k].x, player[k].y, line2[0], line2[1], 1);
+                        //drawLine(player[k].x, player[k].y, line1[0], line1[1], 1);
+                        //drawLine(player[k].x, player[k].y, line2[0], line2[1], 1);
 
-                        drawArc(line1[0], line1[1], line2[0], line2[1], player[k].x, player[k].y, 1);
+                        //drawArc(line1[0], line1[1], line2[0], line2[1], player[k].x, player[k].y, 1);
 
                         //drawPoint(player[0].x, player[0].y, 2, "");
 
-                        drawPoint(line1[0], line1[1], 0, "" + i + ": 0");
-                        drawPoint(line2[0], line2[1], 0, "" + i + ": 1");
+                        //drawPoint(line1[0], line1[1], 0, "" + i + ": 0");
+                        //drawPoint(line2[0], line2[1], 0, "" + i + ": 1");
                     }
 
                     for (var i = 0; i < obstacleAngles.length; i++) {
                         var line1 = followAngle(obstacleAngles[i][0], player[k].x, player[k].y, 50 + player[k].size);
                         var line2 = followAngle((obstacleAngles[i][0] + obstacleAngles[i][1]).mod(360), player[k].x, player[k].y, 50 + player[k].size);
-                        drawLine(player[k].x, player[k].y, line1[0], line1[1], 6);
-                        drawLine(player[k].x, player[k].y, line2[0], line2[1], 6);
+                        //drawLine(player[k].x, player[k].y, line1[0], line1[1], 6);
+                        //drawLine(player[k].x, player[k].y, line2[0], line2[1], 6);
 
-                        drawArc(line1[0], line1[1], line2[0], line2[1], player[k].x, player[k].y, 6);
+                        //drawArc(line1[0], line1[1], line2[0], line2[1], player[k].x, player[k].y, 6);
 
                         //drawPoint(player[0].x, player[0].y, 2, "");
 
-                        drawPoint(line1[0], line1[1], 0, "" + i + ": 0");
-                        drawPoint(line2[0], line2[1], 0, "" + i + ": 1");
+                        //drawPoint(line1[0], line1[1], 0, "" + i + ": 0");
+                        //drawPoint(line2[0], line2[1], 0, "" + i + ": 1");
                     }
 
                     if (followMouse && goodAngles.length == 0) {
@@ -1065,7 +1065,7 @@ console.log("Running Apos Bot!");
                         var destination = followAngle(shiftedAngle, player[k].x, player[k].y, distance);
 
                         destinationChoices.push(destination);
-                        drawLine(player[k].x, player[k].y, destination[0], destination[1], 1);
+                        //drawLine(player[k].x, player[k].y, destination[0], destination[1], 1);
                         //tempMoveX = destination[0];
                         //tempMoveY = destination[1];
 
@@ -1086,7 +1086,7 @@ console.log("Running Apos Bot!");
                         var line1 = followAngle(perfectAngle, player[k].x, player[k].y, f.verticalDistance());
 
                         destinationChoices.push(line1);
-                        drawLine(player[k].x, player[k].y, line1[0], line1[1], 7);
+                        //drawLine(player[k].x, player[k].y, line1[0], line1[1], 7);
                         //tempMoveX = line1[0];
                         //tempMoveY = line1[1];
                     } else if (badAngles.length > 0 && goodAngles == 0) {
@@ -1105,7 +1105,7 @@ console.log("Running Apos Bot!");
 							}
 						}
 						var line1 = followAngle(finalAngle,player[k].x,player[k].y,f.verticalDistance());
-                        drawLine(player[k].x, player[k].y, line1[0], line1[1], 2);
+                        //drawLine(player[k].x, player[k].y, line1[0], line1[1], 2);
 						destinationChoices.push(line1);
                     } else if (clusterAllFood.length > 0) {
                         for (var i = 0; i < clusterAllFood.length; i++) {
@@ -1121,7 +1121,7 @@ console.log("Running Apos Bot!");
 
                                 clusterAllFood[i][3] = clusterAngle;
 
-                                drawPoint(clusterAllFood[i][0], clusterAllFood[i][1], 1, "");
+                                //drawPoint(clusterAllFood[i][0], clusterAllFood[i][1], 1, "");
                                 //console.log("After: " + clusterAllFood[i][2]);
                         }
 
@@ -1145,13 +1145,13 @@ console.log("Running Apos Bot!");
                         destinationChoices.push(destination);
                         //tempMoveX = destination[0];
                         //tempMoveY = destination[1];
-                        drawLine(player[k].x, player[k].y, destination[0], destination[1], 1);
+                        //drawLine(player[k].x, player[k].y, destination[0], destination[1], 1);
                     } else {
                         //If there are no enemies around and no food to eat.
                         destinationChoices.push([tempMoveX, tempMoveY]);
                     }
 
-                    drawPoint(tempPoint[0], tempPoint[1], tempPoint[2], "");
+                    //drawPoint(tempPoint[0], tempPoint[1], tempPoint[2], "");
                     //drawPoint(tempPoint[0], tempPoint[1], tempPoint[2], "" + Math.floor(computeDistance(tempPoint[0], tempPoint[1], I, J)));
                     //drawLine(tempPoint[0], tempPoint[1], player[0].x, player[0].y, 6);
                     //console.log("Slope: " + slope(tempPoint[0], tempPoint[1], player[0].x, player[0].y) + " Angle: " + getAngle(tempPoint[0], tempPoint[1], player[0].x, player[0].y) + " Side: " + (getAngle(tempPoint[0], tempPoint[1], player[0].x, player[0].y) - 90).mod(360));
