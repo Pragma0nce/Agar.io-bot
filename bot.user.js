@@ -7,6 +7,7 @@
 // @author      http://www.twitch.tv/apostolique
 // ==/UserScript==
 
+alert('test');
 var aposBotVersion = 3.56;
 
 //TODO: Team mode
